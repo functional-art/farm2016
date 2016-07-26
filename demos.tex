@@ -1,0 +1,111 @@
+\documentclass{sigplanconf}
+
+\usepackage{url}
+
+\begin{document}
+\toappear
+
+\special{papersize=8.5in,11in}
+\setlength{\pdfpageheight}{\paperheight}
+\setlength{\pdfpagewidth}{\paperwidth}
+
+% Uncomment the publication rights you want to use.
+%\publicationrights{transferred}
+%\publicationrights{licensed}     % this is the default
+%\publicationrights{author-pays}
+
+\title{FARM 2016 Demo Summary}
+\subtitle{4th ACM SIGPLAN International Workshop on \\ Functional Art, Music, Modelling and Design}
+
+\authorinfo{Michael Sperber}
+           {Active Group GmbH}
+           {\url{sperber@deinprogramm.de}}
+\authorinfo{David Janin}
+           {Bordeaux INP, Bordeaux University}
+           {\url{janin@labri.fr}}
+
+\maketitle
+
+\begin{abstract}
+  This is a summary of the demos presented at the 4th ACM SIGPLAN
+  International Workshop on Functional Art, Music, Modelling and
+  Design, prepared prior to the event itself.  The submitted abstracts
+  of these demos are available on the FARM 2016 web site at
+  \url{http://functional-art.org/2016/}.
+\end{abstract}
+
+\category{J.5}{Arts and Humanities}{Arts, fine and performing}
+
+\section{Juniper: A Functional Reactive Programming Language for the Arduino}
+
+Caleb Helbling and Samuel Guyer
+
+FIXME
+
+\section{Klangmeister}
+
+Chris Ford (ThoughtWorks) presents \textit{Klangmeister}, a live
+coding environment for music.  Klangmeister lets the user construct
+synthesizers, compose music, and finally perform that music.
+Klangmeister runs in the browser and thus does not require the
+explicit installation of software.  It makes use of the Javascript Web
+Audio API.
+
+Music is coded using ClojureScript, a dialect of Clojure that
+compiles to JavaScript.  Klangmeister makes use of a version of the
+embedded version of ClojureScript compiler, which also runs in the
+browser.
+
+Klangmeister's wrapper around the Web Audio API is purefly functional,
+and makes synthesis design clear and accessible:  Music-theoretical
+concepts such as scales and time signatures translate into
+higher-order functions.
+
+\section{VoxelCAD, a Collaborative Voxel-Based CAD tool}
+
+Csongor Kiss and Toby Shaw present \textit{VoxelCAD}, a tool for
+collaboratively editing vector representations of 3D shapes, giving
+immediate feedback about the resulting voxel forms.
+
+VoxelCAD enables collaborative editing by storing delta changes, which
+can be synchronized, similarly to the Darcs distributed versioning
+system.  VoxelCAD also includes a Lisp-like scripting language.
+
+VoxelCAD uses Constructive Solid Geometry as its user-facing model:
+The user can combine primitive solids through boolean operations.
+Voxelisation---the conversion between the shapes vector representation
+and its voxel for---is mostly done on the GPU, using the WebGL API.
+
+VoxelCAD consists of two parts: The frontend is written in Elm, the
+backend in Haskell.
+
+\section{Alda: A Text-Based Music Composition Language}
+
+Dave Yarwood presents \textit{Alda}, a programming language that
+allows representing musical composition as text documents.  It draws
+ideas from several previous systems---Music Macro Language (MML),
+LilyPond,  and ChucK.
+
+Alda views a musical score as a series of transformations on Clojure
+maps.  The Alda parser generates these transformations from the input
+score.
+
+Alda is written in Clojure, and embeds the language in the musical
+notation.  It thus allows generating compositions programmatically.
+
+\section{Epimorphism}
+
+Francis Shuman presents \textit{Epimorphism}, a visual art project that
+generates images by simulating video feedback.  The simulation does
+not have to suffer from the fidelity problem of a real-world physical
+setup, which opens new visual possibilities.
+
+The system can be seeded from arbitrary shapes and textures.  Complex
+transformations such as those borrowed from the computation of
+Mandelbrot and Julia sets lead to a fractal appearance of many of the
+generated images.
+
+Epimorphism is written in PureScript, a dialect of Haskell that
+translates to JavaScript.
+
+\end{document}
