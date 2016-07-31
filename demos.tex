@@ -65,7 +65,7 @@ Audio API.
 
 Music is coded using ClojureScript, a dialect of Clojure that
 compiles to JavaScript.  Klangmeister makes use of 
-an embedded version of the ClojureScript compiler, which also runs in the
+an embedded ClojureScript compiler, which also runs in the
 browser.
 
 Klangmeister's wrapper around the Web Audio API is purely functional,
@@ -79,10 +79,9 @@ Csongor Kiss and Toby Shaw present \textit{VoxelCAD}, a tool for
 collaboratively editing vector representations of 3D shapes, giving
 immediate feedback about the resulting voxel forms.
 
-VoxelCAD enables collaborative editing by storing delta changes, which
+VoxelCAD enables collaborative editing by storing delta chan\-ges, which
 can be synchronized, similarly to the Darcs distributed versioning
 system.  VoxelCAD also includes a Lisp-like scripting language.
-
 VoxelCAD uses Constructive Solid Geometry as its user-facing model:
 The user can combine primitive solids through boolean operations.
 Voxelisation---the conversion between the shapes vector representation
@@ -97,13 +96,12 @@ Dave Yarwood presents \textit{Alda} (\url{https://github.com/alda-lang/alda}), a
 allows representing musical composition as text documents.  It draws
 ideas from several previous systems---Music Macro Language (MML),
 LilyPond,  and ChucK.
-
 Alda views a musical score as a series of transformations on Clojure
 maps.  The Alda parser generates these transformations from the input
 score.
 
 Alda is written in Clojure, and embeds the language in the musical
-notation.  It thus allows generating compositions programmatically.
+notation, and thus allows generating compositions programmatically.
 
 \section{Epimorphism}
 
